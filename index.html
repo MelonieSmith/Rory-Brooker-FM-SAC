@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Game of Life: Finance Edition
+  </title>
+  <link rel="stylesheet" href=""https://use.fontawesome.com/releases/v5.6.1/css/all.css"">
+  <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<html>
+<body>
+    <div id="openPage">
+      <h1 class="highlight">Welcome to Game of Life: Finance Edition</h1>
+      <section id="introduction">
+        <img src="https://media.giphy.com/media/3o8dFzIXb0qaE3pYWs/giphy.gif" alt="Dollar Note Spiral" width="25%" height="25%">
+        <p>Throughout life, you will be faced with many challenges, such as rent, education and worst of all, children, if you're unlucky enough to have them.
+          The game you are about to emback on shouldn't be taken lightly, and everything is this may or may not happen to you in the real world.
+          Mind you, this is supposed to be fun, so just click on that little button down there and we can get started. <br>
+          Yep, so it's just there. <br>
+          We don't have all day... Hurry Up!
+        </p>
+      </section>
+      <button id="begin">
+        Click here to begin!
+      </button>
+    </div>
+    <div id="puzzleOne" class="hide">
+      <h1 class="highlight">Death Trap...<br>I mean Life Challenge One - Opening a Bank Account</h1>
+
+      <div id=character_descriptions>
+        <section id="droid">
+          <img src="img/Wacpak.png" alt="Wacpak logo">
+          <p>Bank – Wacpak<br> Interest Rate - 5.0%<br>
+            Compounding weekly</p>
+        </section>
+        <section id="bard">
+          <img src="img/Callback.jpg" alt="Callback Logo">
+          <p>Bank – Call Back<br>Interest Rate - 6.9%<br>Compounding weekly</p>
+        </section>
+        <section id="ranger">
+          <img src="img/ABZ.png" alt="ABZ logo">
+          <p>Bank – ABZ<br>Interest Rate - 4.1%<br>Compounding weekly</p>
+        </section>
+		    <section id="wizard">
+          <img src="img/StarryNight.jpg" alt="Take Logo">
+          <p>Bank - Take<br>Interest Rate - 4.5%<br>Compounding weekly</p>
+        </section>
+      </div>
+
+      <h2>As a child, you see all sorts of things that you don't understand. One of these is
+        banks. These sneaky little death traps are really shady and attention should be payed towards them.
+        However, you have reached that age (in this case, 16) where you need to keep a place
+        for the money that you don't spend on toys and lollies.<br>
+        The above cards show 4 different types of banks, each with their own names and interest rates.<br>
+        As you start to grow up, you notice that not everything is the best it can be. Banks are a
+        perfect example. Every bank has different interest rates and lots of sneaky little traps that could
+        make you worse off. That's why you should try and think about the choices you're about to make.<br>
+        As a 16-year-old, you get <span>weekly payments</span> of <span>$361.16</span>. You want to put this in a bank to save for your first car.
+        The car you're looking at buying is going to cost <span>$24,000</span>, which isn't a lot of money for a car.
+        Now, because you're still with your parents, all the money from those payments are going in the bank <span>every week</span>.
+        Not only that, you already have $6,000 saved up.<br>
+        The balance of your account, in dollars, after <em>n</em> weeks, V<sub>n</sub>, can be modelled by the recurrence relation
+        shown below.<br>
+        V<sub>0</sub> = 6000,     V<sub>n+1</sub> = rV<sub>n</sub> + 361.16<br>
+        Use your knowledge of Further Mathematics terminology to answer the
+        following questions in order to "grow up".<br>
+      </h2>
+
+      <div id="rangeInputs" class="inputs">
+        <section id="questionOne">
+          <p style="width: 100%;"><strong>How much are the weekly payments, in dollars?:</strong></p>
+          <input id="nameAnswer">
+        </section>
+        <section id="questionTwo">
+          <p style="width: 100%;"><strong>How much did you plan to invest to begin with?: </strong></p>
+          <input id="ageAnswer">
+        </section>
+        <section id="questionThree">
+          <p style="width: 100%;"><strong>After how many months will the balance first be doubled with each bank?: (Each value separated by a space: 1 2 3)?: </strong></p>
+          <input id="shoesizeAnswer">
+        </section>
+        <section id="questionFour">
+          <p style="width: 100%;"><strong>In dollars, what would the balance of the account be after 1 year with Take?: </strong></p>
+          <input id="fourAnswer">
+        </section>
+
+      </div>
+
+  <section id="finishPuzzleOne" class="hide">
+    <p>Now, with this information, which bank is the best for your needs?:</p>
+      Select the bank:
+      <select id="myList" onchange="onAnswerOne()">
+        <option>Select a bank</option>
+        <option>Wacpak</option>
+        <option>Call Back</option>
+        <option>ABZ</option>
+        <option>Take</option>
+        <option>I'll just keep it under my bed</option>
+      </select>
+    <h1 id="resultOne">...</h1>
+  </section>
+      <section id='congratesMoveOnPuzzleOne' class='hide'>
+        <button id= 'moveToPuzzleTwo'>
+          Well Done! Click here to start losing your money very slowly.
+        </button>
+      </section>
+    </div>
+
+
+    <div id="puzzleTwo" class='hide'>
+      <h1 class="highlight">Life Challenge Two - Buying a House</h1>
+      <div id=card_descriptions>
+        <section id="header_cards">
+          <img src="img/path_forest_start.jpg" alt="Mushrooms - The aim of the game.">
+        </section>
+        <section id = 'linkToGraphs'>
+          <img src="img/Tree_message.png" alt="Message knifed to tree.">
+          <p>Last week, you had your 25<sup>th</sup> birthday. To many, this is an important milestone, however, you are still
+            living with your parents, which is a really bad thing at your age. Due to the haggling of your mates, you decided, on your better
+            judgement, to buy a house.<br> The house you're looking at getting is right in the heart of Melbourne,
+            a thriving metropolis in the south of Bogan Land (a.k.a Australia). However, this house is very expensive, with the
+            price set at $560,000. To help soften the blow to your budget, the bank is offering a loan of $540,000, leaving you $20,000 out of pocket.
+            Lucky your account is ripe with money. You've taken the offer and leaving high and dry in your 2-bedroom home.<br>
+            Now, hang on! You still have to pay the bank! The bank had offered you two types of loans: an <em>interest only loan</em>, and a <em>compounding loan</em>, that compounds <em>monthly</em>. You are to answer the following questions to figure
+            out what loan is the best for your needs. Should you choose the compounding loan, you arranged to have the loan fully paid off in 24 years. The loan has an interest rate of
+            <span>4.7% per annum, compounding monthly</span>. You are willing to put forward <span>$12,000</span> to begin with and will pay <span>$3060.12</span> at the end of the month (which leaves $67.64 a month for food, water and clothes: poor planning, I know).
+            </p>
+        </section>
+      </div>
+      <div id=puzzleTwoResults class=inputs>
+        <section id="InterestQuestionA">
+          <p style="width: 100%;"><strong>The first two questions are working out the interest only loan. <br>
+          After 3 years, what is the balance of the loan, in dollars?:</strong></p>
+          <input id="InterestAnswerA">
+        </section>
+        <section id="InterestAnswerB">
+          <p style="width: 100%;"><strong>Which of the following recurrence relations correctly models the interest only loan?: </strong></p>
+          <input type="radio" name="choice" value="Steel Gaze"> V<sub>0</sub> = $560,000    V<sub>n+1</sub> = 0.0039V<sub>n</sub> + 3127.76<br>
+          <input type="radio" name="choice" value="Lesley Lark"> V<sub>n</sub> = $560,000    V<sub>n+1</sub> = 0.0039V<sub>n</sub> + 2115<br>
+          <input type="radio" name="choice" value="Flame Whisperer"> V<sub>0</sub> = $540,000    V<sub>n+1</sub> = 4.7V<sub>n</sub> + 3127.76<br>
+          <input type="radio" name="choice" value="Dis Tress"> V<sub>0</sub> = $540,000    V<sub>n+1</sub> = 1.0039V<sub>n</sub> + 2115<br>
+        </section>
+        <section id="CompoundQuestionA">
+          <p style="width: 100%;"><strong>These questions are working out the compounding loan. <br>
+          After 5 years, what will be the balance of the loan, in dollars?:</strong></p>
+          <input id="CompoundAnswerA">
+        </section>
+        <section id="CompoundQuestionB">
+          <p style="width: 100%;"><strong>Which of the following recurrence relations correctly models the compounding loan?: </strong></p>
+          <input type="radio" name="choicA" value="right"> V<sub>0</sub> = $528,000    V<sub>n+1</sub> = 1.0039V<sub>n</sub> + 3060.12<br>
+          <input type="radio" name="choicA" value="wrong"> V<sub>n</sub> = $560,000    V<sub>n+1</sub> = 0.0039V<sub>n</sub> + 2115<br>
+          <input type="radio" name="choicA" value="wrong1"> V<sub>0</sub> = $540,000    V<sub>n+1</sub> = 4.7V<sub>n</sub> + 3127.76<br>
+          <input type="radio" name="choicA" value="wrong2"> V<sub>0</sub> = $560,000    V<sub>n+1</sub> = 1.0039V<sub>n</sub> + 2115<br>
+        </section>
+        <section id="CompoundQuestionC">
+          <p style="width: 100%;"><strong>How much will the last payment be if you want it fully paid off at the end of the 24<sup>th</sup> year, in dollars?:</strong></p>
+          <input id="CompoundAnswerC">
+        </section>
+        <section id="CompoundQuestionD">
+          <p style="width: 100%;"><strong>After 5 years, the bank has changed the interest rate (sadly, upwards) to 5.1%. <br>
+            Given that the payments stay the same, after how many months will it take to fully pay it off?: </strong></p>
+          <input id="CompoundAnswerD">
+        </section>
+        <section id="CompoundQuestionE">
+          <p style="width: 100%;"><strong>If you kept the payments and time to pay it off the same, how much would still be left after the last payment, in dollars?: </strong></p>
+          <input id="CompoundAnswerE">
+        </section>
+        <section id="CompoundQuestionF">
+          <p style="width: 100%;"><strong>What would the new monthly payments be if you still want the loan to be fully paid off in the same amount of time?: </strong></p>
+          <input id="CompoundAnswerF">
+        </section>
+      <button id='submitAnswerTwoButton' onclick="submitAnswerTwo"> Submit Answer </button>
+      </div>
+      <section onclick='onCompletionPuzzleTwo' id='finishPuzzleTwoButton' class='hide'>
+        <button id="completePuzzleTwoButton" class='hide'>
+          Correct Answer! Click Here To Lose Your Car
+        </button>
+      </section>
+    </div>
+
+    <div id="puzzleThree" class="hide">
+      <h1 class="highlight">Life Challenge Three - The Real Price of Owning a Car</h1>
+      <h2><br>
+        As you see below, the Jazz has given you over 20 long years of service. Sadly though, all good things must come to an end.<br>
+        <img src="img/box_plot.png" style="width: 30%; height: 30%"
+        alt="Jazz."><br>
+        Everything in life gets to that stage where it isn't worth what it was 5 or so years ago. This does not include houses, some cars, some toys... <br>
+        Actually... It's probably easier to say that only a few things go up in price the older it is. Anyway, over time, your car has
+        slowly lost its value. With every chipped bumper and "I think I'm going to hit that cat" tyre screech that we all know, the humble Jazz
+        has gone down and down in price until ... well, let's find out, shall we?
+      </h2>
+      <div id=warLord>
+        <section id = 'warLord_Statistics'>
+          <img src="img/pigmy.jpg" alt="Jazz Car.">
+          <p><em>Jazz Depreciation Numbers</em><br>
+            Luckly for you, that isn't your car, although yours isn't much better. When you first bought your car 20 years ago
+            (remember the first life challenge), it cost <span>$24,000</span>. You've worked out that for every kilometre you drive with it lowers its value
+            by <span>3 cents</span>. When you last check the odometer, you were able to figure out how many kilometres you did in total, which
+            was about <span>300,000</span>. Using this, you created this recurrence relation, but some of the values are missing.<br>
+            V<sub>0</sub> = 24,000    V<sub>n+1</sub> = V<sub>n</sub> - x
+            <br>
+          </p>
+        </section>
+      </div>
+      <div id='heroRoll'>
+        <div id=puzzle3AQuestion>
+          <p><em>These first questions are for the Depreciation questions.</em><br>
+            <button id="finishPuzzleThree">
+              What is the average distance travelled in the Jazz per month, in kilometres?
+            </button>
+          </p>
+          <input id="puzzleThreeAInput" type="text" autocomplete="off">
+        </div>
+        <h1 id="resultThree">...</h1>
+
+        <div id=puzzleThreeBtn class=hide>
+          <div id=puzzle3BQuestion>
+          <p>Using the information gained in the last question,<br>
+            <button id="finishPuzzleThreeB">
+              How much does the Jazz depreciate each year (the value of x), to two significant figures?
+            </button>
+          </p>
+          <input id="puzzleThreeBInput" type="text" autocomplete="off">
+          </div>
+
+          <div id=puzzleThreeCtn class=hide>
+            <div id=puzzle3CQuestion>
+            <p>How much is the Jazz worth, in dollars (n = 20)?<br>
+              <button id="finishPuzzleThreeC">
+                You're so close!
+              </button>
+            </p>
+            <input id="puzzleThreeCInput" type="text" autocomplete="off">
+            </div>
+
+
+            <div id=puzzleThreeDtn class=hide>
+              <div id=puzzle3DQuestion>
+              <p>Next year, the rate at which the Jazz will depreciate will increase to 5 cents per kilometre.<br>
+                <button id="finishPuzzleThreeD">
+                  Based on this, what will the Jazz be worth in 5 years time, in dollars?
+                </button>
+              </p>
+              <input id="puzzleThreeDInput" type="text" autocomplete="off">
+              </div>
+
+          <div id=puzzleThreeBBtn class=hide>
+            <p>Awesome work! You were able to figure out why no one buys a Jazz. Don't take it personally. We were all teenages at one point.<br>
+            This life challenge was quite difficult, but more is to come. The next room tackles annuities and the problems that come with withdrawing money</p>
+          <button id="finishPuzzleThreePartBButton">
+            Click here to progress to the next Challenge!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <div id='puzzleFour' class="hide">
+      <h1 class="highlight">Life Challenge Four - Annuities</h1>
+      <div id=activity>
+        <section id = 'activityOne'>
+          <p><em>Annuities. What are they?</em><br>
+          You made it past half way. You're nearing the eternal darkness, comforting and brooding. But before you can find peace, you need to endure the living dead; Bank Accountants.<br>
+          This time though, you want to open an annuity. In an annuity, you put in a large sum of money, and every month, you take some of that money out. The
+          money earns interest, so you end up with more money in the long run.
+          </p>
+        </section>
+        <section id='activityTwo'>
+          <img src="img/boomzoom.png" alt="Amortisation Table. If you can't see this, I feel sorry for you.">
+          <p>
+            Above is a amortisation table. These are used to show investments over a short period of time. They include payment amounts and interest paid.
+            Your bank has sent you this one but some of the values are missing. You're to find these missing numbers and send them back with some other information.
+            You can't remember setting up the account so you have to start from the start. The only thing you do remember was the amount you put in ($12,500) and that the payments and rate it compounds at
+            happens every month.<br>
+            Good luck!
+          </p>
+        </section>
+      </div>
+
+      <h2>You can use your CAS calculator to find the values if you need to.
+        <br>
+        When you have the numbers you need, input them below; left to right separated by a space.<br>
+      </h2>
+      <div id="puzzleFourPartOne" >
+      <button id="finishPuzzleFourPartOne">
+        Amortisation table values, in dollars (rounded to 2 decimal places)
+      </button>
+      <input id="puzzleFourInputPartOne" type="text" autocomplete="off">
+      <button id="finishPuzzleFourPartTwo">
+        What would be V<sub>0</sub>, in dollars?
+      </button>
+      <input id="puzzleFourInputPartTwo" type="text" autocomplete="off">
+
+      <button id="finishPuzzleFourPartThree">
+        What would R be equal to, as a percentage?
+      </button>
+      <input id="puzzleFourInputPartThree" type="text" autocomplete="off">
+      <button id="finishPuzzleFourPartFour">
+        What is the value after 10 years?
+      </button>
+      <input id="puzzleFourInputPartFour" type="text" autocomplete="off">
+      In 10 years, you plan to start taking money out of it. Using the previous values, answer the following questions.
+      <button id="finishPuzzleFourPartTwo1">
+        How many months will it last if your payments are the same to the payments put in?
+      </button>
+      <input id="puzzleFourInputPartTwo1" type="text" autocomplete="off">
+      <button id="finishPuzzleFourPartTwo2">
+        By making the annuity last 25 years, What would the payments be, in dollars?
+      </button>
+      <input id="puzzleFourInputPartTwo2" type="text" autocomplete="off">
+      <button id='checkPuzzleFourAnswers' class='attemptButton'>
+        Try
+      </button>
+      </div>
+      <h1 id="resultFour">
+        ...
+      </h1>
+
+      <div id=puzzleFourBtn class=hide>
+      <button id="finishPuzzleFourButton" class='hide'>
+        <img src="https://media.giphy.com/media/26DNg2kTthGLHpgfm/giphy.gif" alt="Opening Lock">
+        Correct again! Click here for LAST Life Challenge
+      </button>
+      </div>
+    </div>
+
+    <div id='puzzleFive' class="hide">
+      <h1 class="highlight">Life Challenge 5 - Your Last Gift</h1>
+      <div id=grove_description>
+        <section id="mushrooms">
+          <img src="img/mushrooms.jpg" alt="The grove">
+          <p>You are getting to the age where everything seems to slow down. Where everything looks innocent and sweet.
+            With this epiphany comes generosity. You've decided to give your last gift to the world in the form of a perpetuity. <br>
+            This will fund an award that gives grants every year to young, talented and hard-done-by astronomers wishing to study further.
+            Before you can do that, you need to figure out how much money you are going to put forward. Based on the fact that you're 69 years old,
+             you are earning about <span>$72,967.27</span> a year. You've saved up <span>$1.4 million</span> dollars and are putting that forward as well.
+          </p>
+        </section>
+      </div>
+      <section id="warning_sign">
+        <h2><em>The Nitty Gritty</em><br>
+          <img id="warning_sign_image" src="img/woodenSign.png" alt="The warning">
+          <p>
+            You're going to wait another 2 years before you set it up. The bank you're going with has guaranteed an interest rate of 8.4%.
+            Given that you have the same income and the amount in the bank doesn't increase, answer the following questions.
+          </p>
+        </h2>
+      </section>
+      <section id="puzzleFiveButtons">
+      <button id="finishPuzzleFivePartOne">
+        How much are you putting into the perpetuity, in dollars?
+      </button>
+      <input id="puzzleFiveInputPartOne" type="text" autocomplete="off">
+      <button id="finishPuzzleFivePartTwo">
+        How much will the perpetuity be worth in 15 years, in dollars?
+      </button>
+      <input id="puzzleFiveInputPartTwo" type="text" autocomplete="off">
+      <button id="finishPuzzleFivePartThree">
+        How much is the award worth every year, rounded to 2 decimal places?
+      </button>
+      <input id="puzzleFiveInputPartThree" type="text" autocomplete="off">
+      <button id="finishPuzzleFivePartFour">
+        Upon buying the perpetuity, you discover much to your disgust, that the rate has dropped by 1.7% due to an impending pandemic.
+        What is the new value of the award?
+      </button>
+      <input id="puzzleFiveInputPartFour" type="text" autocomplete="off">
+      <button id="finishPuzzleFivePartFive">
+        Which recurrence relation best describes the new perpetuity?
+      </button>
+      <div id="perpetunityAmount">
+      <input type="radio" name="choiceA" value="wronger"> V<sub>0</sub> = $1,400,000    V<sub>n+1</sub> = 1.084V<sub>n</sub> + 129858.50<br>
+      <input type="radio" name="choiceA" value="wrong"> V<sub>n</sub> = $1,472,987.27    V<sub>n+1</sub> = 6.7V<sub>n</sub> + 129858.50<br>
+      <input type="radio" name="choiceA" value="right"> V<sub>0</sub> = $1,545,934.54    V<sub>n+1</sub> = 1.067V<sub>n</sub> + 103577.61<br>
+      <input type="radio" name="choiceA" value="wrong2"> V<sub>0</sub> = $154,593.45    V<sub>n+1</sub> = 8.4V<sub>n</sub> + 103577.61<br>
+      </div>
+      <br>
+      <button id='checkPuzzleFiveAnswers' class='attemptButton'>
+        Try
+      </button>
+    </section>
+      <h1 id="resultFive">
+        ...
+      </h1>
+
+      <div id="finishPuzzleFive" class="hide">
+        <button id="finishPuzzleFiveButton">
+          Well Done!<br>
+          <span>You have made through your life with minimal mishaps. You have done well.</span><br>
+          <em>You should be proud!</em> <br>
+            <span>However, all good things must come to an end. You've lived your life and now, it is time to leave the world, hopefully in a better state than before.</span>
+        </button>
+        <section id='celebration'>
+        <img src="img/dogdeathmeme.jpg" alt="Death Scene">
+        </section>
+      </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
